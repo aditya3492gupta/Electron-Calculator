@@ -1,0 +1,18 @@
+{
+  "name": "electroncppapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "imagePath": "../../assets/",
+  "scripts": {
+    "start": "nodemon --exec electron src/main/main.js",
+    "nodestart": "electron src/main/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.3.1"
+  }
+}
