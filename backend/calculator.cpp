@@ -36,9 +36,13 @@ int main(int argc, char *argv[])
     }
 
     std::string expression = argv[1];
-    std::cerr << "expression:" << expression << std::endl;
+    // std::cerr << "expression:" << expression << std::endl;
     double result = evaluateExpression(expression);
-    std::cerr << "result is:" << result << std::endl;
+    // std::cerr << "result is:" << result << std::endl;
     std::cout << result << std::endl;
     return 0;
 }
+
+/*
+in backend directory run g++ -o calculator.exe calculator.cpp on terminal
+*/

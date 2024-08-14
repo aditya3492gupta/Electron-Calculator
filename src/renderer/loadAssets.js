@@ -32,6 +32,8 @@
 // });
 
 
+// absolute path for images
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const imagePath = await window.electron.getImagePath();
@@ -42,6 +44,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         image.src = `${imagePath}user.png`;
         const cal = document.getElementById('calc');
         cal.src = `${imagePath}calc.png`;
+        const boyimg = document.getElementById('boyimg');
+        boyimg.src = `${imagePath}boyim.png`;
 
     } catch (error) {
         console.error('Error loading image path:', error);

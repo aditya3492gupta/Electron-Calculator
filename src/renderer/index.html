@@ -7,16 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Content based on Figma Design -->
     <div id="app">
-        <!-- Content based on Figma Design -->
+        <div class="images">
+            <div class="logo"><img id="wi" alt="Wi-Jungle Logo">
+                <img id="boyimg" alt="boy">
+            </div>
+        </div>
         <div class="login-container">
-            <h1>Login</h1>
+            <h1>Let's Secure Your PC</h1>
             <input type="text" id="username" placeholder="Username">
             <input type="password" id="password" placeholder="Password">
+            <div class="terms"><input type="checkbox" name="tick" id="tick" required><label for="checkbox"></label>By
+                continuing
+                you agree to <a href="#">Terms &
+                    Conditions</a> and <a href="#">Privacy Policy</a>.</label></div>
             <button id="loginButton">Login</button>
             <p id="result"></p>
         </div>
     </div>
     <script src="renderer.js"></script>
+    <script src="loadAssets.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-let display = document.getElementById('display');
+let display = document.getElementById('display-calculator');
 let buttons = Array.from(document.getElementsByClassName('btn'));
 
 // Handle button clicks
@@ -13,6 +13,7 @@ buttons.map(button => {
                 break;
             case '=':
                 e.preventDefault();
+                console.log(display.value);
                 calculateResult(display.value);
                 break;
             case '√':
@@ -79,6 +80,7 @@ document.addEventListener('keydown', (e) => {
         case 'Enter':
         case '=':
             e.preventDefault();
+            console.log(display.value)
             calculateResult(display.value);
             break;
         case 'Backspace':
@@ -97,11 +99,21 @@ document.addEventListener('keydown', (e) => {
 
 // Function to evaluate the expression
 function calculateResult(expression) {
+    expression = expression.trim();
+    console.log("Expression received:", expression);
     try {
         let result = eval(expression);
         display.value = result;
+        // let result = window.electronAPI.calculate(expression);
+        // if (window.electronAPI && window.electronAPI.calculate) {
+        //     window.electronAPI.calculate(expression);
+        // } else {
+        //     console.error("electronAPI is not defined");
+        // }
+        // console.log("Error in calculation try");
+
     } catch (error) {
         display.value = 'Error';
-        console.log("Error in calculation:", error);
+        console.log("Error in calculation: catch", error);
     }
 }
